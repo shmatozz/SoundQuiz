@@ -5,4 +5,7 @@
     <string name="rules">Правила</string>
     <string name="choose_players">Настройте список игроков</string>
     <string name="add_player">Добавить игрока</string>
+    <string name="add">Добавить</string>
+    <string name="new_player_hint">Имя нового игрока</string>
+    <string name="exist_player">Имя уже занято</string>
 </resources>
