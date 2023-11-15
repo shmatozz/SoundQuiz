@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">SoundQuiz</string>
+    <string name="title_activity_main" translatable="false">MainActivity</string>
+    <string name="play">Play</string>
+    <string name="rules">Rules</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="choose_players">Set players list</string>
+    <string name="nothing" translatable="false">nothing</string>
+    <string name="title_activity_game" translatable="false">GameActivity</string>
+    <string name="title_activity_rules" translatable="false">RulesActivity</string>
+    <string name="add_player">Add player</string>
+</resources>

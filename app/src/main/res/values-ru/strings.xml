@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SoundQuiz</string>
+    <string name="play">Играть</string>
+    <string name="rules">Правила</string>
+    <string name="choose_players">Настройте список игроков</string>
+    <string name="add_player">Добавить игрока</string>
+</resources>
