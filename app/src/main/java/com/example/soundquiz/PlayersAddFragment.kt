@@ -10,7 +10,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
-import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.soundquiz.databinding.FragmentPlayersAddBinding
 
@@ -18,6 +17,7 @@ class PlayersAddFragment : Fragment() {
 
     private lateinit var binding: FragmentPlayersAddBinding
     private val adapter = PlayerAdapter()
+    private lateinit var communicator: Communicator
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,6 +27,7 @@ class PlayersAddFragment : Fragment() {
         val root = binding.root
 
         init()
+        communicator = activity as Communicator
 
         return root
     }
@@ -41,7 +42,9 @@ class PlayersAddFragment : Fragment() {
             }
 
             toPlayButton.setOnClickListener {
-                // change fragment
+                val playersNames = ArrayList<String>()
+                for (player in adapter.playersList) playersNames.add(player.name)
+                communicator.passData(playersNames)
             }
         }
     }
