@@ -8,4 +8,9 @@
     <string name="add">Добавить</string>
     <string name="new_player_hint">Имя нового игрока</string>
     <string name="exist_player">Имя уже занято</string>
+    <string name="transport">Транспорт</string>
+    <string name="sport">Спорт</string>
+    <string name="professions">Профессии</string>
+    <string name="nature">Природа</string>
+    <string name="current_player">Сейчас выбирает: %1$s</string>
 </resources>
