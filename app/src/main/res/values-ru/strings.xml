@@ -13,4 +13,5 @@
     <string name="professions">Профессии</string>
     <string name="nature">Природа</string>
     <string name="current_player">Сейчас выбирает: %1$s</string>
+    <string name="stop">Стоп</string>
 </resources>
