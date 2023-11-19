@@ -27,6 +27,7 @@
             android:fontFamily="@font/baloo2_medium"
             android:hint="@string/new_player_hint"
             android:inputType="text"
+            android:maxLength="16"
             android:textSize="20sp"
             app:layout_constraintBottom_toTopOf="@+id/create_button"
             app:layout_constraintEnd_toEndOf="parent"
