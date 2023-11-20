@@ -1,4 +1,4 @@
-package com.example.soundquiz
+package com.example.soundquiz.fragments
 
 import android.app.Dialog
 import android.graphics.Color
@@ -15,6 +15,9 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.soundquiz.data.Player
+import com.example.soundquiz.R
+import com.example.soundquiz.adapters.PlayerScoreAdapter
 import com.example.soundquiz.databinding.FragmentGameBinding
 
 
@@ -85,7 +88,9 @@ class GameFragment : Fragment() {
                 card.background = ContextCompat.getDrawable(requireContext(), R.drawable.card_red)
             }
             3 -> {
-                card.background = ContextCompat.getDrawable(requireContext(), R.drawable.card_yellow)
+                card.background = ContextCompat.getDrawable(requireContext(),
+                    R.drawable.card_yellow
+                )
             }
             4 -> {
                 card.background = ContextCompat.getDrawable(requireContext(), R.drawable.card_green)

@@ -1,7 +1,8 @@
-package com.example.soundquiz
+package com.example.soundquiz.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.soundquiz.R
 
 class RulesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

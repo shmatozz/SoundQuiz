@@ -1,4 +1,4 @@
-package com.example.soundquiz
+package com.example.soundquiz.fragments
 
 import android.app.Dialog
 import android.graphics.Color
@@ -11,6 +11,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import android.widget.EditText
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.soundquiz.data.Communicator
+import com.example.soundquiz.data.Player
+import com.example.soundquiz.R
+import com.example.soundquiz.adapters.PlayerAdapter
 import com.example.soundquiz.databinding.FragmentPlayersAddBinding
 
 class PlayersAddFragment : Fragment() {

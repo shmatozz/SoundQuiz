@@ -1,28 +1,32 @@
-package com.example.soundquiz
+package com.example.soundquiz.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.soundquiz.databinding.PlayerItemBinding
+import com.example.soundquiz.data.Player
+import com.example.soundquiz.R
+import com.example.soundquiz.databinding.PlayerWithScoreItemBinding
 
 
-class PlayerAdapter: RecyclerView.Adapter<PlayerAdapter.PlayerHolder>() {
+class PlayerScoreAdapter: RecyclerView.Adapter<PlayerScoreAdapter.PlayerHolder>() {
 
-    val playersList = ArrayList<Player>()
+    private val playersList = ArrayList<Player>()
 
     class PlayerHolder(item: View): RecyclerView.ViewHolder(item) {
-        private val binding = PlayerItemBinding.bind(item)
+        private val binding = PlayerWithScoreItemBinding.bind(item)
         fun bind(player: Player) = with(binding) {
             playerName.text = player.name
+            playerScore.text = player.score.toString()
         }
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PlayerHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.player_item, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.player_with_score_item, parent, false)
 
         return PlayerHolder(view)
     }
+
 
     override fun getItemCount(): Int {
         return playersList.size
@@ -32,15 +36,8 @@ class PlayerAdapter: RecyclerView.Adapter<PlayerAdapter.PlayerHolder>() {
         holder.bind(playersList[position])
     }
 
-    fun addPlayer(deposit: Player) {
-        playersList.add(deposit)
+    fun addPlayer(player: Player) {
+        playersList.add(player)
         notifyDataSetChanged()
-    }
-
-    fun deletePlayer() {
-        if (playersList.size > 0) {
-            playersList.removeLast()
-            notifyDataSetChanged()
-        }
     }
 }

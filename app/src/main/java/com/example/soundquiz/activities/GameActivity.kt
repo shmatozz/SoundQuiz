@@ -1,8 +1,12 @@
-package com.example.soundquiz
+package com.example.soundquiz.activities
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import com.example.soundquiz.data.Communicator
+import com.example.soundquiz.fragments.GameFragment
+import com.example.soundquiz.fragments.PlayersAddFragment
+import com.example.soundquiz.R
 
 
 class GameActivity : AppCompatActivity(), Communicator {
