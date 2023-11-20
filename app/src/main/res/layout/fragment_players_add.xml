@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/light_blue"
     android:hapticFeedbackEnabled="false"
-    tools:context=".PlayersAddFragment"
+    tools:context=".fragments.PlayersAddFragment"
     tools:layout_editor_absoluteX="0dp"
     tools:layout_editor_absoluteY="-1dp">
 

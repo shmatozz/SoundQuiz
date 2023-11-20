@@ -131,7 +131,7 @@
 
     <ImageButton
         android:id="@+id/current_score_button"
-        style="@style/button"
+        style="@style/white_button"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:layout_marginTop="16dp"
