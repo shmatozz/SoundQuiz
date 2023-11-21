@@ -46,7 +46,7 @@
 
         <Button
             android:id="@+id/stop_button"
-            style="@style/white_button"
+            style="@style/button"
             android:layout_width="320dp"
             android:layout_height="48dp"
             android:layout_marginStart="16dp"
