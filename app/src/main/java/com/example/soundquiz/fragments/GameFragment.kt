@@ -28,6 +28,7 @@ class GameFragment : Fragment() {
     private lateinit var players: ArrayList<Player>
     private var currentPlayer: Int = 0
 
+    // lists of words to each theme
     private lateinit var transportWords: MutableList<String>
     private lateinit var sportsWords: MutableList<String>
     private lateinit var professionsWords: MutableList<String>
@@ -60,6 +61,9 @@ class GameFragment : Fragment() {
         return root
     }
 
+    /**
+     * Initializing listeners of game layout buttons and cards
+     */
     private fun init() = binding.apply {
         currentScoreButton.setOnClickListener {
             showPlayersScores()
@@ -82,6 +86,10 @@ class GameFragment : Fragment() {
         }
     }
 
+    /**
+     * Open clicked card with selected word, start timer
+     * @param theme - one of game themes (transport, sport, profession, nature)
+     */
     private fun cardSelected(theme: Themes) {
         val cardDialog = Dialog(requireContext())
         cardDialog.setContentView(R.layout.dialog_card_selected)
@@ -121,6 +129,7 @@ class GameFragment : Fragment() {
             cardDialog.dismiss()
         }
 
+        // when timer is over -> open results dialog
         timer.setOnChronometerTickListener {
             if (beginTime - SystemClock.elapsedRealtime() < 1000) {
                 timer.stop()
@@ -131,6 +140,9 @@ class GameFragment : Fragment() {
         cardDialog.show()
     }
 
+    /**
+     * Open players score window
+     */
     private fun showPlayersScores() {
         val scoresDialog = Dialog(requireContext())
         scoresDialog.setContentView(R.layout.dialog_players_score)
@@ -149,6 +161,10 @@ class GameFragment : Fragment() {
         scoresDialog.show()
     }
 
+    /**
+     * Generate random word from lists according to selected theme
+     * @param theme - one of game themes (transport, sport, profession, nature)
+     */
     private fun getWord(theme: Themes) : String {
         val word: String
         when (theme) {
@@ -175,6 +191,9 @@ class GameFragment : Fragment() {
         return word
     }
 
+    /**
+     * Checks if words in some theme is over and disable such card
+     */
     private fun checkAndDisableCard() {
         if (transportWords.size == 0) {
             binding.transportCard.isEnabled = false

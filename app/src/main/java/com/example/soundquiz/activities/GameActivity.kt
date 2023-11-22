@@ -18,6 +18,10 @@ class GameActivity : AppCompatActivity(), Communicator {
         commitFragment(PlayersAddFragment())
     }
 
+    /**
+     * Put players list as argument to game fragment and commit new fragment
+     * @param players - List with players names
+     */
     override fun passData(players: ArrayList<String>) {
         val bundle = Bundle()
         bundle.putStringArrayList("players", players)
@@ -27,6 +31,9 @@ class GameActivity : AppCompatActivity(), Communicator {
         commitFragment(gameFragment)
     }
 
+    /**
+     * Commit new fragment at Game Activity
+     */
     private fun commitFragment(fragment: Fragment) {
         val ft = supportFragmentManager.beginTransaction()
         ft.replace(R.id.frame_layout, fragment)

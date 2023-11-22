@@ -36,6 +36,9 @@ class PlayersAddFragment : Fragment() {
         return root
     }
 
+    /**
+     * Initializing Recycler view adapter, listeners of add players layout buttons and cards
+     */
     private fun init() {
         binding.apply {
             playersList.layoutManager = LinearLayoutManager(this@PlayersAddFragment.context)
@@ -53,6 +56,9 @@ class PlayersAddFragment : Fragment() {
         }
     }
 
+    /**
+     * Open dialog with input name field
+     */
     private fun addNewPlayer() {
         val addDialog = Dialog(requireContext())
         addDialog.setContentView(R.layout.dialog_add_player)
@@ -85,6 +91,12 @@ class PlayersAddFragment : Fragment() {
         addDialog.show()
     }
 
+    /**
+     * Checks if no such player name in the list
+     * @param name - new name of player
+     * @return true - if no such player
+     *         false - name is already occupied
+     */
     private fun isUnique(name: String) : Boolean {
         for (player in adapter.playersList) {
             if (player.name == name) {
