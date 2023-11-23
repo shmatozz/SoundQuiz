@@ -27,10 +27,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/card_blue"
-            android:fontFamily="@font/baloo2_bold"
+            android:fontFamily="@font/reef"
             android:gravity="center"
             android:text="@string/transport"
-            android:textSize="34sp" />
+            android:textSize="48sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -54,10 +54,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/card_red"
-            android:fontFamily="@font/baloo2_bold"
+            android:fontFamily="@font/reef"
             android:gravity="center"
             android:text="@string/sport"
-            android:textSize="34sp" />
+            android:textSize="48sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -80,10 +80,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/card_yellow"
-            android:fontFamily="@font/baloo2_bold"
+            android:fontFamily="@font/reef"
             android:gravity="center"
             android:text="@string/professions"
-            android:textSize="34sp" />
+            android:textSize="48sp" />
     </androidx.cardview.widget.CardView>
 
     <androidx.cardview.widget.CardView
@@ -106,10 +106,10 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:background="@drawable/card_green"
-            android:fontFamily="@font/baloo2_bold"
+            android:fontFamily="@font/reef"
             android:gravity="center"
             android:text="@string/nature"
-            android:textSize="34sp" />
+            android:textSize="48sp" />
     </androidx.cardview.widget.CardView>
 
     <TextView
@@ -120,8 +120,9 @@
         android:layout_marginTop="100dp"
         android:layout_marginEnd="50dp"
         android:background="@drawable/card_white"
-        android:fontFamily="@font/baloo2_semibold"
+        android:fontFamily="@font/reef"
         android:gravity="center"
+        android:padding="5dp"
         android:text="@string/current_player"
         android:textColor="@color/black"
         android:textSize="24sp"
