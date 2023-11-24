@@ -22,4 +22,9 @@
     <string name="sport_words">poker,billiards,tennis,hammer throwing,bobsleigh,biathlon,basketball,baseball,birpong,bowling,archery,golf,athletics,bodybuilding,programming,sumo,surfing,figure skating,chess,hobbyhorsing</string>
     <string name="professions_words">miner,blacksmith,cashier,fireman,programmer,accountant,croupier,sapper,judge,butcher,barber,bartender,security guard,woodcutter,demolition man,welder,DJ,gardener,cook,chemist</string>
     <string name="nature_words">hail,penguin,heat,beach,mountain river,dolphin,bonfire,childbirth,flood,swamp,waterfall,volcanic eruption,ant,eagle,avalanche,silence,ice,earthquake,exclusion zone,potato field</string>
+    <string name="who_guess">Who guess the word?</string>
+    <string name="nobody_guess">Nobody guess</string>
+    <string name="lets_go">Let\'s GO!</string>
+    <string name="name" translatable="false">%1$s</string>
+    <string name="now_explain">Now explain:</string>
 </resources>
