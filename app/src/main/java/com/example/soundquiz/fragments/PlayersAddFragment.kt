@@ -17,10 +17,10 @@ import com.example.soundquiz.R
 import com.example.soundquiz.adapters.PlayerAdapter
 import com.example.soundquiz.databinding.FragmentPlayersAddBinding
 
-class PlayersAddFragment : Fragment() {
+class PlayersAddFragment : Fragment(), PlayerAdapter.Listener {
 
     private lateinit var binding: FragmentPlayersAddBinding
-    private val adapter = PlayerAdapter()
+    private val adapter = PlayerAdapter(this)
     private lateinit var communicator: Communicator
 
     override fun onCreateView(
@@ -104,5 +104,9 @@ class PlayersAddFragment : Fragment() {
             }
         }
         return true
+    }
+
+    override fun onClick(player: Player) {
+        // nothing
     }
 }

@@ -9,14 +9,18 @@ import com.example.soundquiz.R
 import com.example.soundquiz.databinding.PlayerItemBinding
 
 
-class PlayerAdapter: RecyclerView.Adapter<PlayerAdapter.PlayerHolder>() {
+class PlayerAdapter(private val listener: Listener): RecyclerView.Adapter<PlayerAdapter.PlayerHolder>() {
 
     val playersList = ArrayList<Player>()
 
     class PlayerHolder(item: View): RecyclerView.ViewHolder(item) {
         private val binding = PlayerItemBinding.bind(item)
-        fun bind(player: Player) = with(binding) {
+        fun bind(player: Player, listener: Listener) = with(binding) {
             playerName.text = player.name
+
+            playerCard.setOnClickListener {
+                listener.onClick(player)
+            }
         }
     }
 
@@ -31,11 +35,15 @@ class PlayerAdapter: RecyclerView.Adapter<PlayerAdapter.PlayerHolder>() {
     }
 
     override fun onBindViewHolder(holder: PlayerHolder, position: Int) {
-        holder.bind(playersList[position])
+        holder.bind(playersList[position], listener)
     }
 
-    fun addPlayer(deposit: Player) {
-        playersList.add(deposit)
+    fun addPlayer(player: Player) {
+        playersList.add(player)
         notifyDataSetChanged()
+    }
+
+    interface Listener {
+        fun onClick(player: Player)
     }
 }
