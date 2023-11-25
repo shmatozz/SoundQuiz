@@ -30,7 +30,7 @@
 
             <TextView
                 android:id="@+id/player_name"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:layout_weight="3"
@@ -47,7 +47,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:fontFamily="@font/reef"
-                android:gravity="center|center_horizontal|center_vertical"
+                android:gravity="end|center_vertical"
                 android:text="@string/score"
                 android:textColor="@color/black"
                 android:textSize="30sp" />
