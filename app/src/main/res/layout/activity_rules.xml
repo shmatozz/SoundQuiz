@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/light_blue">
+    android:background="@drawable/soundquiz_background">
 
     <TextView
         android:id="@+id/rules_title"
@@ -13,6 +13,7 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="16dp"
+        android:background="@drawable/card_white"
         android:fontFamily="@font/reef"
         android:gravity="center"
         android:text="@string/rules"
@@ -31,7 +32,9 @@
         android:layout_marginTop="16dp"
         android:layout_marginEnd="32dp"
         android:layout_marginBottom="32dp"
+        android:background="@drawable/card_white"
         android:fontFamily="@font/reef"
+        android:padding="10dp"
         android:text="@string/rules"
         android:textColor="@color/black"
         app:layout_constraintBottom_toBottomOf="parent"
