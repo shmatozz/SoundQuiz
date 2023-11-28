@@ -3,6 +3,7 @@ package com.example.soundquiz.fragments
 import android.app.Dialog
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
+import android.media.MediaPlayer
 import android.os.Bundle
 import android.os.SystemClock
 import android.view.LayoutInflater
@@ -117,6 +118,7 @@ class GameFragment : Fragment(), PlayerAdapter.Listener {
         val timer = cardDialog.findViewById<Chronometer>(R.id.timer)
         val card = cardDialog.findViewById<ConstraintLayout>(R.id.background)
         val wordView = cardDialog.findViewById<TextView>(R.id.word)
+        val player = MediaPlayer.create(requireContext(), R.raw.time_over)
 
         // set background according selected theme and generate word
         when (theme) {
@@ -138,7 +140,7 @@ class GameFragment : Fragment(), PlayerAdapter.Listener {
             }
         }
 
-        val beginTime = SystemClock.elapsedRealtime() + 61000
+        val beginTime = SystemClock.elapsedRealtime() + 6000
         timer.base = beginTime
         timer.start()
 
@@ -149,9 +151,12 @@ class GameFragment : Fragment(), PlayerAdapter.Listener {
 
         // when timer is over -> open results dialog
         timer.setOnChronometerTickListener {
-            if (beginTime - SystemClock.elapsedRealtime() < 1000) {
+            val elapsedMillis: Long = (SystemClock.elapsedRealtime() - timer.base)
+            if (elapsedMillis in 0..1000) {
+                player.start()
+                cardDialog.dismiss()
                 timer.stop()
-                // open result window
+                showWinnerSelectionWindow()
             }
         }
 
