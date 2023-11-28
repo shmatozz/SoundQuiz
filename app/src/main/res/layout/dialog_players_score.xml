@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="15dp"
-    app:contentPadding="10dp"
+    app:contentPadding="5dp"
     app:layout_constraintEnd_toEndOf="parent"
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent">
@@ -12,5 +12,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/players_rv"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:background="@drawable/card_dark_blue"
+        android:padding="10dp" />
 </androidx.cardview.widget.CardView>
