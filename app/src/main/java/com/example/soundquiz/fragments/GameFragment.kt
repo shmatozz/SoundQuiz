@@ -140,7 +140,7 @@ class GameFragment : Fragment(), PlayerAdapter.Listener {
             }
         }
 
-        val beginTime = SystemClock.elapsedRealtime() + 6000
+        val beginTime = SystemClock.elapsedRealtime() + 61000
         timer.base = beginTime
         timer.start()
 
