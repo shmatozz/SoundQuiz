@@ -26,7 +26,8 @@
         <activity
             android:name=".activities.GameActivity"
             android:exported="true"
-            android:theme="@style/Theme.SoundQuiz">
+            android:theme="@style/Theme.SoundQuiz"
+            android:windowSoftInputMode="adjustPan">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
